@@ -2,6 +2,7 @@ const { multiply, isEven, getGreeting, divide } = require('../tasks/math');
 
 
 
+describe('multiply', () => {
     test('debe multiplicar dos números positivos', () => {
         expect(multiply(3, 4)).toBe(12);
     });
@@ -17,7 +18,6 @@ const { multiply, isEven, getGreeting, divide } = require('../tasks/math');
     test('debe lanzar error si los argumentos no son números', () => {
         expect(() => multiply('a', 3)).toThrow('Los argumentos deben ser números');
     });
-
 });
 
 describe('isEven', () => {
