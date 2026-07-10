@@ -35,6 +35,10 @@ jobs:
         run: |
           echo "node Version: ${{ vars.NODE_VERSION }}"
         
+      - name: Secret Name
+        run: |
+          echo "Deploying with key ${{ secrets.SECRET_NAME }}"
+
       - name: Build
         run: npm run build
         env:
