@@ -26,6 +26,14 @@ jobs:
       - name: show variables
         run: |
           echo "App: ${{ env.APP_NAME }}, Node: ${{ env.NODE_VERSION }}"
+
+      - name: Show github Variables
+        run: |
+          echo "App Version: ${{ vars.APP_VERSION }}"
+
+      - name: Show node Variables
+        run: |
+          echo "node Version: ${{ vars.NODE_VERSION }}"
         
       - name: Build
         run: npm run build
