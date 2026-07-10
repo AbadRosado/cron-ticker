@@ -21,13 +21,13 @@ jobs:
       BUILD_DIR: dist
 
     steps:
-      uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      name: show variables
-      run: |
-        echo "App: ${{ env.APP_NAME }}, Node: ${{ env.NODE_VERSION }}"
+      - name: show variables
+        run: |
+          echo "App: ${{ env.APP_NAME }}, Node: ${{ env.NODE_VERSION }}"
         
-        name: Build
+      - name: Build
         run: npm run build
         env:
           APP_VERSION: '2.0.0'
